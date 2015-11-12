@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ratios</title>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/ratios.js"></script>
+</head>
+<body>
+	<div class="ratio-calc">
+		<input type="text" class="ratio-input ratio-i1" value="1024">
+		<input type="text" class="ratio-input ratio-i2" value="768">
+		<br>
+		<input type="text" class="ratio-input ratio-i3">
+		<input type="text" class="ratio-input ratio-i4">
+		<br>
+		<button class="ratio-submit">Calculate!</button>
+	</div>
+
+<style>
+dt {
+	cursor:pointer;
+}
+dt.active {
+	background-color:lightblue;
+}
+dd {
+	display:none;
+}
+</style>
+	<!-- dl>(dt{Definition $}+dd>p*2>lorem50)*5 -->
+
+	<dl>
+		<dt>Definition 1</dt>
+		<dd>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates nihil vitae laboriosam, porro maiores repellat explicabo, assumenda culpa, mollitia soluta in totam optio animi labore voluptatibus! Consequuntur modi ea minus, quaerat voluptate autem distinctio repudiandae voluptatem accusantium quo officiis excepturi odit perspiciatis exercitationem expedita suscipit natus repellendus tenetur iusto voluptatibus.</p>
+			<p>Natus expedita quidem voluptas, odio blanditiis. Omnis, libero, sed. Cupiditate, nemo asperiores id vel animi est repellat dolorem quos unde at adipisci inventore nobis dicta aut. Magnam amet est vel eius assumenda voluptatum, harum saepe quos architecto excepturi et eveniet suscipit accusantium libero quis, at nam debitis aut quidem labore.</p>
+		</dd>
+		<dt>Definition 2</dt>
+		<dd>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus obcaecati qui tenetur iste fugit? Dolorem cumque eligendi, doloribus quisquam voluptatum consequuntur voluptates in quasi reprehenderit voluptas laborum architecto asperiores rem eaque ipsa quos ut quam illum! Temporibus minima blanditiis iusto quidem, necessitatibus, tempora laborum voluptate recusandae molestiae, totam explicabo dolor.</p>
+			<p>Nemo id, deserunt esse dolores temporibus, eligendi, recusandae natus delectus doloribus est modi corrupti placeat ea explicabo labore quo sed iusto! Possimus numquam, odio. Sed eveniet eos voluptates dolorum, fugiat, vel autem quod rerum ratione et, molestias suscipit eum aut in aspernatur cupiditate commodi nulla omnis, praesentium ut a repudiandae.</p>
+		</dd>
+		<dt>Definition 3</dt>
+		<dd>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam error ipsum quisquam consequuntur eligendi minima, distinctio eaque, aspernatur quidem, laudantium sunt iure consequatur. Odio ratione reprehenderit aspernatur. Repudiandae, iste dolorem doloribus temporibus minima quae impedit dolores perspiciatis itaque odit maxime repellendus sequi, nulla illum voluptatem mollitia esse eligendi. Fuga, inventore.</p>
+			<p>Sequi culpa facere, aspernatur, corrupti optio id rerum modi hic fuga eveniet at quaerat soluta cumque nihil vitae non! Excepturi hic maiores distinctio quos illo eaque, error ab odit, laudantium necessitatibus maxime perferendis optio recusandae, est, ipsum pariatur amet expedita nostrum voluptate dolor velit! Magni molestiae laborum ex doloribus, libero!</p>
+		</dd>
+		<dt>Definition 4</dt>
+		<dd>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate impedit atque ipsam vero dolorem nobis ullam, perspiciatis porro asperiores maiores a optio earum vel velit cum, eius, accusamus officia aspernatur. Velit, quia, vitae. Numquam ex animi tenetur odio quasi adipisci, quia cupiditate, quis inventore rerum eaque dolores, dolorum fugit, rem!</p>
+			<p>Ea debitis laboriosam illo mollitia ullam aspernatur consequatur similique, possimus, voluptatibus assumenda maxime ipsa dolores architecto harum doloribus veritatis odit alias aliquam necessitatibus consequuntur dicta amet repudiandae magni nemo? Voluptatem fuga id modi ullam quis tempore maxime, et provident atque doloribus sequi deserunt sunt sint, quod corporis consequuntur iure voluptas?</p>
+		</dd>
+		<dt>Definition 5</dt>
+		<dd>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate magni vero sequi sunt quidem ratione ipsa non, voluptatum at? Eaque cumque debitis animi eligendi consequuntur beatae! Aut eveniet mollitia, magni blanditiis eligendi facere fugiat consectetur nemo, provident facilis excepturi quia similique, adipisci id atque nihil repellat fuga molestiae, totam obcaecati.</p>
+			<p>Ut soluta, velit? Obcaecati eos facere, dolores ut maxime doloremque quaerat neque ratione impedit deleniti blanditiis! Sapiente nam nostrum fugiat corrupti velit, quod, hic iure cupiditate odio nisi aut facilis ullam ea voluptatibus amet repellendus qui officiis beatae vitae excepturi. Temporibus corporis totam natus maxime ex, iusto magni libero, aperiam.</p>
+		</dd>
+	</dl>
+
+<style>
+.hoverer {
+	width:400px;
+	height:400px;
+	position:relative;
+	background-color:black;
+	overflow:hidden;
+}
+.hoverer img {
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	transition:all 0.3s;
+	opacity:1;
+	transform:scale(1,1);
+}
+.hoverer:hover img {
+	opacity:0.5;
+	transform:scale(1.1,1.1);
+}
+.overlay-text {
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	color:white;
+	text-align:center;
+}
+.overlay-text p {
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+</style>
+
+	<div class="hoverer">
+		<img src="images/kitten.jpeg" alt="">
+		<div class="overlay-text">
+			<p>Some text</p>
+		</div>
+	</div>
+</body>
+</html>
