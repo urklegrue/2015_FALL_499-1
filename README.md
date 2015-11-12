@@ -2,4 +2,6 @@
 
 Class Project!
 
-This class project is totally the best.
+This class project is totally the best
+
+Jessica
